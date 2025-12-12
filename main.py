@@ -19,9 +19,7 @@ class ImageSummary(BaseModel):
 
 def run(plugin: Plugin, host: str, model: str, prompt: str, images: list[Path]):
     logging.info("Connecting to vLLM")
-    client = OpenAI(
-        base_url=f"http://{host}/v1",
-    )
+    client = OpenAI(base_url=f"http://{host}/v1", api_key="EMPTY")
     for image in images:
         encoded = base64.b64encode(image.read_bytes()).decode()
         data_url = f"data:image/jpeg;base64,{encoded}"
