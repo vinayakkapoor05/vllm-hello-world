@@ -14,7 +14,7 @@ from openai import OpenAI
 class ImageSummary(BaseModel):
     short_description: str
     long_description: str
-    objects: str
+    objects: list[str]
 
 
 def run(plugin: Plugin, host: str, model: str, prompt: str, images: list[Path]):
