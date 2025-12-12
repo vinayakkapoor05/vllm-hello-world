@@ -1,0 +1,13 @@
+name: "vllm-hello-world"
+version: "0.1.0"
+description: "Hello World example for vLLM inference on a SAGE node"
+keywords: ""
+authors: "Vinayak Kapoor"
+collaborators: ""
+funding: ""
+license: ""
+homepage: ""
+source:
+  architectures:
+    - "linux/amd64"
+    - "linux/arm64"
